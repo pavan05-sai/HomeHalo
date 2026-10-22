@@ -1,0 +1,48 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fraunces';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F8F7F2;
+  --card: #FFFFFF;
+  --primary: #168568;
+  --primary-hover: #117155;
+  --primary-foreground: #FFFFFF;
+  --foreground: #242923;
+  --muted-foreground: #72776F;
+  --border: #E8E6DE;
+  --secondary: #EAF3EC;
+  --ring: #168568;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2.display {
+  font-family: 'Fraunces Variable', Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Focus rings */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
