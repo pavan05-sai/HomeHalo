@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+markers = [
+    "unit: pure unit tests (mocked, no DB)",
+    "integration: real Atlas DB required (uses MONGODB_DB_TEST)",
+]
